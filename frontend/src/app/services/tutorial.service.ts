@@ -3,7 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Tutorial } from '../models/tutorial.model';
 
-const baseUrl = 'http://localhost:8080/api/tutorials';
+const baseUrl = 'https://courtliest-nonproliferous-krystina.ngrok-free.dev/api/tutorials';
 
 @Injectable({
   providedIn: 'root'
@@ -40,3 +40,4 @@ export class TutorialService {
     return this.http.get<Tutorial[]>(`${baseUrl}?title=${title}`);
   }
 }
+
